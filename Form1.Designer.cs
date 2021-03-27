@@ -37,8 +37,11 @@ namespace GSCH
             this.Vvod = new System.Windows.Forms.TextBox();
             this.Crypt = new System.Windows.Forms.Button();
             this.Decrypt = new System.Windows.Forms.Button();
+            this.Picture = new System.Windows.Forms.PictureBox();
+            this.Paint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Diapazon_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Diapazon_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -103,7 +106,7 @@ namespace GSCH
             // 
             // Decrypt
             // 
-            this.Decrypt.Location = new System.Drawing.Point(323, 186);
+            this.Decrypt.Location = new System.Drawing.Point(323, 197);
             this.Decrypt.Name = "Decrypt";
             this.Decrypt.Size = new System.Drawing.Size(146, 60);
             this.Decrypt.TabIndex = 8;
@@ -111,11 +114,32 @@ namespace GSCH
             this.Decrypt.UseVisualStyleBackColor = true;
             this.Decrypt.Click += new System.EventHandler(this.Decrypt_Click);
             // 
+            // Picture
+            // 
+            this.Picture.BackColor = System.Drawing.Color.White;
+            this.Picture.Location = new System.Drawing.Point(892, 12);
+            this.Picture.Name = "Picture";
+            this.Picture.Size = new System.Drawing.Size(818, 806);
+            this.Picture.TabIndex = 9;
+            this.Picture.TabStop = false;
+            // 
+            // Paint
+            // 
+            this.Paint.Location = new System.Drawing.Point(546, 197);
+            this.Paint.Name = "Paint";
+            this.Paint.Size = new System.Drawing.Size(151, 60);
+            this.Paint.TabIndex = 10;
+            this.Paint.Text = "Draw";
+            this.Paint.UseVisualStyleBackColor = true;
+            this.Paint.Click += new System.EventHandler(this.Draw);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1722, 846);
+            this.Controls.Add(this.Paint);
+            this.Controls.Add(this.Picture);
             this.Controls.Add(this.Decrypt);
             this.Controls.Add(this.Crypt);
             this.Controls.Add(this.Vvod);
@@ -128,6 +152,7 @@ namespace GSCH
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.Diapazon_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Diapazon_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,6 +168,8 @@ namespace GSCH
         private System.Windows.Forms.TextBox Vvod;
         private System.Windows.Forms.Button Crypt;
         private System.Windows.Forms.Button Decrypt;
+        private System.Windows.Forms.PictureBox Picture;
+        private System.Windows.Forms.Button Paint;
     }
 }
 

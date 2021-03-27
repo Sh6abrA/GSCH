@@ -68,22 +68,73 @@ namespace GSCH
         private void Decrypt_Click(object sender, EventArgs e)
         {
             string[] reshifr = new string[crypt.flow.Length];
-            for (int i = 0; i < crypt.flow.Length; i++)
+            if (crypt.check == 1)
             {
-                for (int j = 0; j < crypt.key.Length; j++)
+                for (int i = 0; i < crypt.flow.Length; i++)
                 {
-                    if (crypt.flow[i] == crypt.key[j])
+                    for (int j = 0; j < crypt.key.Length; j++)
                     {
-                        reshifr[i] = crypt.slovar2[j].ToString();
+                        if (crypt.flow[i] == crypt.key[j])
+                        {
+                            reshifr[i] = crypt.slovar1[j].ToString();
+                        }
+                    }
+                }
+
+            }
+            else
+            {
+                for (int i = 0; i < crypt.flow.Length; i++)
+                {
+                    for (int j = 0; j < crypt.key.Length; j++)
+                    {
+                        if (crypt.flow[i] == crypt.key[j])
+                        {
+                            reshifr[i] = crypt.slovar2[j].ToString();
+                        }
                     }
                 }
             }
+
             string s = null;
-            foreach(string i in reshifr)
+            foreach (string i in reshifr)
             {
                 s = s + i;
             }
             Vvod.Text = s;
+        }
+        private void Draw(object sender, EventArgs e)
+        {
+            
+            
+            
+            int x = Picture.Width / 2;
+            int y = Picture.Height / 2;
+            Bitmap bmp = new Bitmap(Picture.Width, Picture.Height);
+            Graphics graph = Graphics.FromImage(bmp);
+            Pen pen = new Pen(Color.Red);
+            int[] vs = { 0, 1, 2, 3, 4, 5, 6, 7};
+            GSCH painter = new GSCH(vs, 8);
+            for(int i = 0; i <= 50000; i++)
+            {
+                painter = new GSCH(painter.gs, 8);
+                switch (painter.gs[^1])
+                {
+                    case 0: graph.DrawLine(pen, x, y, x, --y); break;
+                    case 1: graph.DrawLine(pen, x, y, ++x, --y); break;
+                    case 2: graph.DrawLine(pen, x, y, ++x, y); break;
+                    case 3: graph.DrawLine(pen, x, y, ++x, ++y); break;
+                    case 4: graph.DrawLine(pen, x, y, x, ++y); break;
+                    case 5: graph.DrawLine(pen, x, y, --x, ++y); break;
+                    case 6: graph.DrawLine(pen, x, y, --x, y); break;
+                    case 7: graph.DrawLine(pen, x, y, --x, --y); break;
+                }
+
+            }
+            Picture.Image = bmp;
+            
+            
+            
         }
     }
 }

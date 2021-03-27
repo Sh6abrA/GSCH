@@ -39,6 +39,7 @@ namespace GSCH
             this.Decrypt = new System.Windows.Forms.Button();
             this.Picture = new System.Windows.Forms.PictureBox();
             this.Paint = new System.Windows.Forms.Button();
+            this.Drawer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Diapazon_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Diapazon_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
@@ -46,16 +47,22 @@ namespace GSCH
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(74, 90);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("EagleSans-Bold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(84, 91);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(205, 91);
             this.button1.TabIndex = 0;
             this.button1.Text = "Генерация случайного числа";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Diapazon_1
             // 
+            this.Diapazon_1.BackColor = System.Drawing.Color.Silver;
+            this.Diapazon_1.Font = new System.Drawing.Font("EagleSans-Bold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Diapazon_1.Location = new System.Drawing.Point(12, 23);
             this.Diapazon_1.Name = "Diapazon_1";
             this.Diapazon_1.Size = new System.Drawing.Size(120, 23);
@@ -63,6 +70,9 @@ namespace GSCH
             // 
             // Diapazon_2
             // 
+            this.Diapazon_2.BackColor = System.Drawing.Color.Silver;
+            this.Diapazon_2.Font = new System.Drawing.Font("EagleSans-Bold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Diapazon_2.ForeColor = System.Drawing.Color.Black;
             this.Diapazon_2.Location = new System.Drawing.Point(220, 23);
             this.Diapazon_2.Name = "Diapazon_2";
             this.Diapazon_2.Size = new System.Drawing.Size(120, 23);
@@ -70,42 +80,62 @@ namespace GSCH
             // 
             // Vivod
             // 
-            this.Vivod.Location = new System.Drawing.Point(12, 263);
+            this.Vivod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Vivod.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Vivod.Font = new System.Drawing.Font("EagleSans-Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Vivod.ForeColor = System.Drawing.Color.White;
+            this.Vivod.Location = new System.Drawing.Point(12, 314);
             this.Vivod.Multiline = true;
             this.Vivod.Name = "Vivod";
-            this.Vivod.Size = new System.Drawing.Size(338, 118);
+            this.Vivod.Size = new System.Drawing.Size(357, 208);
             this.Vivod.TabIndex = 4;
             // 
             // Oracul
             // 
+            this.Oracul.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Oracul.Font = new System.Drawing.Font("EagleSans-Bold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Oracul.ForeColor = System.Drawing.Color.Black;
+            this.Oracul.Image = global::GSCH.Properties.Resources.back_2;
             this.Oracul.Location = new System.Drawing.Point(522, 91);
             this.Oracul.Name = "Oracul";
             this.Oracul.Size = new System.Drawing.Size(194, 90);
             this.Oracul.TabIndex = 5;
-            this.Oracul.Text = "Жак Фреско";
             this.Oracul.UseVisualStyleBackColor = true;
             this.Oracul.Click += new System.EventHandler(this.Oracul_Click);
             // 
             // Vvod
             // 
-            this.Vvod.Location = new System.Drawing.Point(441, 263);
+            this.Vvod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Vvod.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Vvod.Font = new System.Drawing.Font("EagleSans-Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Vvod.ForeColor = System.Drawing.Color.White;
+            this.Vvod.Location = new System.Drawing.Point(442, 314);
             this.Vvod.Multiline = true;
             this.Vvod.Name = "Vvod";
-            this.Vvod.Size = new System.Drawing.Size(312, 118);
+            this.Vvod.Size = new System.Drawing.Size(344, 208);
             this.Vvod.TabIndex = 6;
             // 
             // Crypt
             // 
+            this.Crypt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Crypt.BackgroundImage = global::GSCH.Properties.Resources.back_4;
+            this.Crypt.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.Crypt.Font = new System.Drawing.Font("EagleSans-Bold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Crypt.ForeColor = System.Drawing.Color.Black;
+            this.Crypt.Image = global::GSCH.Properties.Resources.back_4;
             this.Crypt.Location = new System.Drawing.Point(323, 90);
             this.Crypt.Name = "Crypt";
             this.Crypt.Size = new System.Drawing.Size(146, 90);
             this.Crypt.TabIndex = 7;
-            this.Crypt.Text = "Crypt";
-            this.Crypt.UseVisualStyleBackColor = true;
+            this.Crypt.UseVisualStyleBackColor = false;
             this.Crypt.Click += new System.EventHandler(this.Crypt_Click);
             // 
             // Decrypt
             // 
+            this.Decrypt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Decrypt.Font = new System.Drawing.Font("EagleSans-Bold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Decrypt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Decrypt.Image = global::GSCH.Properties.Resources.back_3;
             this.Decrypt.Location = new System.Drawing.Point(323, 197);
             this.Decrypt.Name = "Decrypt";
             this.Decrypt.Size = new System.Drawing.Size(146, 60);
@@ -116,7 +146,7 @@ namespace GSCH
             // 
             // Picture
             // 
-            this.Picture.BackColor = System.Drawing.Color.White;
+            this.Picture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Picture.Location = new System.Drawing.Point(892, 12);
             this.Picture.Name = "Picture";
             this.Picture.Size = new System.Drawing.Size(818, 806);
@@ -125,19 +155,39 @@ namespace GSCH
             // 
             // Paint
             // 
-            this.Paint.Location = new System.Drawing.Point(546, 197);
+            this.Paint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Paint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Paint.Font = new System.Drawing.Font("EagleSans-Bold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Paint.ForeColor = System.Drawing.Color.White;
+            this.Paint.Location = new System.Drawing.Point(150, 633);
             this.Paint.Name = "Paint";
             this.Paint.Size = new System.Drawing.Size(151, 60);
             this.Paint.TabIndex = 10;
-            this.Paint.Text = "Draw";
-            this.Paint.UseVisualStyleBackColor = true;
+            this.Paint.Text = "Draw1";
+            this.Paint.UseVisualStyleBackColor = false;
             this.Paint.Click += new System.EventHandler(this.Draw);
+            // 
+            // Drawer
+            // 
+            this.Drawer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Drawer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Drawer.Font = new System.Drawing.Font("EagleSans-Bold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Drawer.ForeColor = System.Drawing.Color.White;
+            this.Drawer.Location = new System.Drawing.Point(478, 633);
+            this.Drawer.Name = "Drawer";
+            this.Drawer.Size = new System.Drawing.Size(162, 60);
+            this.Drawer.TabIndex = 11;
+            this.Drawer.Text = "Draw2";
+            this.Drawer.UseVisualStyleBackColor = false;
+            this.Drawer.Click += new System.EventHandler(this.Drawer_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1722, 846);
+            this.BackgroundImage = global::GSCH.Properties.Resources.back_1;
+            this.ClientSize = new System.Drawing.Size(1753, 851);
+            this.Controls.Add(this.Drawer);
             this.Controls.Add(this.Paint);
             this.Controls.Add(this.Picture);
             this.Controls.Add(this.Decrypt);
@@ -149,7 +199,7 @@ namespace GSCH
             this.Controls.Add(this.Diapazon_1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Random";
             ((System.ComponentModel.ISupportInitialize)(this.Diapazon_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Diapazon_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
@@ -170,6 +220,7 @@ namespace GSCH
         private System.Windows.Forms.Button Decrypt;
         private System.Windows.Forms.PictureBox Picture;
         private System.Windows.Forms.Button Paint;
+        private System.Windows.Forms.Button Drawer;
     }
 }
 

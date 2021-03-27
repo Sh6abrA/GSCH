@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace GSCH
 {
@@ -112,10 +107,10 @@ namespace GSCH
             int y = Picture.Height / 2;
             Bitmap bmp = new Bitmap(Picture.Width, Picture.Height);
             Graphics graph = Graphics.FromImage(bmp);
-            Pen pen = new Pen(Color.Red);
+            Pen pen = new Pen(Color.White);
             int[] vs = { 0, 1, 2, 3, 4, 5, 6, 7};
             GSCH painter = new GSCH(vs, 8);
-            for(int i = 0; i <= 50000; i++)
+            for(int i = 0; i <= 100000; i++)
             {
                 painter = new GSCH(painter.gs, 8);
                 switch (painter.gs[^1])
@@ -128,13 +123,43 @@ namespace GSCH
                     case 5: graph.DrawLine(pen, x, y, --x, ++y); break;
                     case 6: graph.DrawLine(pen, x, y, --x, y); break;
                     case 7: graph.DrawLine(pen, x, y, --x, --y); break;
+                    
                 }
+                
+            }
 
+            Picture.Image = bmp;
+
+
+        }
+
+        private void Drawer_Click(object sender, EventArgs e)
+        {
+            int x = Picture.Width / 2;
+            int y = Picture.Height / 2;
+            Bitmap bmp = new Bitmap(Picture.Width, Picture.Height);
+            Graphics graph = Graphics.FromImage(bmp);
+            Pen pen = new Pen(Color.White);
+            int rand = 4;
+            
+            for (int i = 0; i <= 50000; i++)
+            {
+                rand = (rand * 5 + 1) % 8;
+                switch (rand)
+                {
+                    case 0: graph.DrawLine(pen, x, y, x, y -= 100); break;
+                    case 1: graph.DrawLine(pen, x, y, x += 100, y -= 100); break;
+                    case 2: graph.DrawLine(pen, x, y, x+= 100, y); break;
+                    case 3: graph.DrawLine(pen, x, y, x += 100, y += 100); break;
+                    case 4: graph.DrawLine(pen, x, y, x, y += 100); break;
+                    case 5: graph.DrawLine(pen, x, y, x -= 100, y += 100); break;
+                    case 6: graph.DrawLine(pen, x, y, x -= 100, y); break;
+                    case 7: graph.DrawLine(pen, x, y, x -= 100, y -= 100); break;
+                    
+                }
+                
             }
             Picture.Image = bmp;
-            
-            
-            
         }
     }
 }

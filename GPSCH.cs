@@ -17,13 +17,7 @@ namespace GSCH
         {
             Random random = new Random();
 
-            if (y == 0)
-            {
-                y = random.Next(0, bit);
-
-
-
-            }
+          
 
             x = y;
             x = (x * const1 + const2) % bit;

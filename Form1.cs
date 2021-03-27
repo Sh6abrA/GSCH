@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace GSCH
 {
@@ -128,13 +123,14 @@ namespace GSCH
                     case 5: graph.DrawLine(pen, x, y, --x, ++y); break;
                     case 6: graph.DrawLine(pen, x, y, --x, y); break;
                     case 7: graph.DrawLine(pen, x, y, --x, --y); break;
+                    
                 }
-
+                
             }
+
             Picture.Image = bmp;
-            
-            
-            
+
+
         }
 
         private void Drawer_Click(object sender, EventArgs e)
@@ -159,8 +155,9 @@ namespace GSCH
                     case 5: graph.DrawLine(pen, x, y, x -= 100, y += 100); break;
                     case 6: graph.DrawLine(pen, x, y, x -= 100, y); break;
                     case 7: graph.DrawLine(pen, x, y, x -= 100, y -= 100); break;
+                    
                 }
-
+                
             }
             Picture.Image = bmp;
         }

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-
-
 namespace GSCH
 {
     public partial class Form1 : Form
@@ -17,7 +15,6 @@ namespace GSCH
             Diapazon_2.Maximum = 10000000;
             Diapazon_2.Minimum = 2;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             double s = 2; //2 для возведения в степень
@@ -36,22 +33,18 @@ namespace GSCH
             {
                 massiv[l] = q;
                 q++;
-
             }
             GSCH vihod = new GSCH(massiv, n);
             Vivod.Text = "Результат работы генератора:" + vihod.gs[^1];
         }
-
         private void Oracul_Click(object sender, EventArgs e)
         {
             x = (x * 3 + 1) % 32;
             Vivod.Text = "Результат работы " + x + " Сколько?";
         }
-
         private void Crypt_Click(object sender, EventArgs e)
         {
             crypt = new Crypt(Vvod.Text);
-
             string s = null;
             foreach (string k in crypt.flow)
             {
@@ -59,7 +52,6 @@ namespace GSCH
             }
             Vivod.Text = s;
         }
-
         private void Decrypt_Click(object sender, EventArgs e)
         {
             string[] reshifr = new string[crypt.flow.Length];
@@ -75,7 +67,6 @@ namespace GSCH
                         }
                     }
                 }
-
             }
             else
             {
@@ -90,7 +81,6 @@ namespace GSCH
                     }
                 }
             }
-
             string s = null;
             foreach (string i in reshifr)
             {
@@ -100,9 +90,6 @@ namespace GSCH
         }
         private void Draw(object sender, EventArgs e)
         {
-            
-            
-            
             int x = Picture.Width / 2;
             int y = Picture.Height / 2;
             Bitmap bmp = new Bitmap(Picture.Width, Picture.Height);
@@ -123,16 +110,10 @@ namespace GSCH
                     case 5: graph.DrawLine(pen, x, y, --x, ++y); break;
                     case 6: graph.DrawLine(pen, x, y, --x, y); break;
                     case 7: graph.DrawLine(pen, x, y, --x, --y); break;
-                    
                 }
-                
             }
-
             Picture.Image = bmp;
-
-
         }
-
         private void Drawer_Click(object sender, EventArgs e)
         {
             int x = Picture.Width / 2;
@@ -141,7 +122,6 @@ namespace GSCH
             Graphics graph = Graphics.FromImage(bmp);
             Pen pen = new Pen(Color.White);
             int rand = 4;
-            
             for (int i = 0; i <= 50000; i++)
             {
                 rand = (rand * 5 + 1) % 8;
@@ -155,9 +135,7 @@ namespace GSCH
                     case 5: graph.DrawLine(pen, x, y, x -= 100, y += 100); break;
                     case 6: graph.DrawLine(pen, x, y, x -= 100, y); break;
                     case 7: graph.DrawLine(pen, x, y, x -= 100, y -= 100); break;
-                    
                 }
-                
             }
             Picture.Image = bmp;
         }

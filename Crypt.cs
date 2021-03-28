@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace GSCH
 {
     class Crypt
@@ -14,10 +13,8 @@ namespace GSCH
         public char[] slovar2 = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.;:?(),".ToCharArray();
         public string[] key;
         public int check;
-
         public Crypt(string str)
         {
-
             bukva = str.ToCharArray();
             flow = new string[bukva.Length];
             for (int i = 1; i < slovar1.Length - 6; i++)
@@ -25,21 +22,16 @@ namespace GSCH
                 if (slovar1[i] == bukva[0])
                 {
                     check = 1;
-
-
                 }
                 else if (i < slovar2.Length - 6 && slovar2[i] == bukva[0])
                 {
                     check = 2;
-
                 }
-
             }
             int[] rand = new int[100];
             for (int i = 0; i < rand.Length; i++)
             {
                 rand[i] = i;
-
             }
             GSCH slovar = new GSCH(rand, 128);
             if (check == 1)
@@ -58,9 +50,6 @@ namespace GSCH
                             p = 0;
                         }
                     }
-
-
-
                 }
                 for (int i = 0; i < bukva.Length; i++)
                 {
@@ -70,12 +59,9 @@ namespace GSCH
                         {
                             flow[i] = key[j];
                             break;
-
                         }
                     }
-
                 }
-
             }
             else if (check == 2)
             {
@@ -93,10 +79,6 @@ namespace GSCH
                             p = 0;
                         }
                     }
-
-
-
-
                 }
                 for (int i = 0; i < bukva.Length; i++)
                 {
@@ -104,34 +86,12 @@ namespace GSCH
                     {
                         if (bukva[i] == slovar2[j])
                         {
-
-
                             flow[i] = key[j];
                             break;
-
                         }
                     }
-
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
     }
 }

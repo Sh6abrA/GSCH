@@ -51,33 +51,18 @@ namespace GSCH
                 s = s + k;
             }
             Vivod.Text = s;
+            Vvod.Text = null;
         }
         private void Decrypt_Click(object sender, EventArgs e)
         {
             string[] reshifr = new string[crypt.flow.Length];
-            if (crypt.check == 1)
+            for (int i = 0; i < crypt.flow.Length; i++)
             {
-                for (int i = 0; i < crypt.flow.Length; i++)
+                for (int j = 0; j < crypt.key.Length; j++)
                 {
-                    for (int j = 0; j < crypt.key.Length; j++)
+                    if (crypt.flow[i] == crypt.key[j])
                     {
-                        if (crypt.flow[i] == crypt.key[j])
-                        {
-                            reshifr[i] = crypt.slovar1[j].ToString();
-                        }
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 0; i < crypt.flow.Length; i++)
-                {
-                    for (int j = 0; j < crypt.key.Length; j++)
-                    {
-                        if (crypt.flow[i] == crypt.key[j])
-                        {
-                            reshifr[i] = crypt.slovar2[j].ToString();
-                        }
+                        reshifr[i] = crypt.code[j].ToString();
                     }
                 }
             }
